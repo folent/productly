@@ -1,0 +1,39 @@
+.button {
+    @extend %font-prime;
+    @include font ($size: 1.6rem, $height: 2.2rem, $weight: 600);
+    padding: 11px 25px 13px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s;
+    &_bordered {
+        background: $color-light;
+        border: 1px solid $color-border;
+        color: $color-text-btn;
+        &:hover {
+            background-color: $color-hovered;
+            border-color: $color-hovered;
+        }
+    }
+    &_colored {
+        background-color: $color-primary;
+        border: 1px solid $color-primary;
+        color: $color-light;
+        &:hover {
+            background-color: $color-additional;
+            border-color: $color-additional;
+        }
+    }
+}
+.link-button {
+    color: $color-primary;
+    @extend %font-add;
+    display: inline-flex;
+    align-items: center;
+    &:hover {
+        @extend %transition;
+        color: $color-additional
+    }
+}
+.link-button__text {
+    margin-left: 9px;
+}

@@ -1,0 +1,40 @@
+.tags {
+    display: flex;
+    >* {
+        margin-right: 7px;
+    }
+}
+
+.tag {
+    width: 43px;
+    height: 28px;
+    border-radius: 90px;
+    padding: 5px 14px;
+    cursor: pointer;
+    @extend %transition;
+    @include font($size: 1.3rem, $height: 2.8rem, $weight: normal);
+    &_selected {
+        background-color: $color-primary;
+        border: 1px solid $color-primary;
+        color: $color-light;
+        
+        &:hover {
+            border: 1px solid $color-border;
+            background-color: $color-light;
+            color: black;
+            
+        }
+    }
+    &_bordered {
+        border: 1px solid $color-border;
+        box-sizing: border-box;
+        border-radius: 90px;
+        &:hover {
+            background-color: $color-primary;
+            color: $color-light;
+        }
+    }
+    &_colored {
+        background-color: $color-tag;
+    }
+}
