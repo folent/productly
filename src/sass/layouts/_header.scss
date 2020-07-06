@@ -24,4 +24,17 @@
     }
      
 }
+.navigation__link {
+    @extend %font-add;
+    a{
+        color: $color-heading;
+        @extend %transition;
+        text-decoration: none;
+        @include font($style: normal, $weight: normal, $size: 1.6rem, $height: 3.5rem);
+ 
+        &:hover {
+            color: $color-primary;
+        }
+    }
+}
  

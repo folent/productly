@@ -20,6 +20,9 @@
     cursor: pointer;
     display: flex;
     flex-direction: column;
+    &_hidden {
+        display: none;
+    }
     @include media-tablet {
         overflow: hidden;
     }
@@ -47,4 +50,28 @@
     margin: 0 0 29px;
     text-align: left;
     flex-grow: 1;
+}
+.strategy__image {
+    @include media-tablet {
+        position: absolute;
+        top: 0;
+    }
+}
+.strategy__image {
+    width: 100%;
+    @include media-tablet {
+        position: static;
+    }
+}
+.strategy__date {
+    @include font ($size: 1.3rem, $height: 2.6rem ,$weight: normal);
+    margin: 0 0 5px;
+}
+
+.strategy__title {
+    margin-bottom: 10px;
+}
+
+.strategy__text {
+    margin: 0 0 12px;
 }
